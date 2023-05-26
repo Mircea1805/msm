@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "modules.h"
 #include "file.h"
 
 #define VERSION "0.0.1"
@@ -30,20 +31,19 @@ int main()
             return 0;
         }
 
-        /*
-        if (strcmp(cli_buffer, "modules")) //list modules
+        if (strncmp(cli_buffer, "modules", 7) == 0) //list modules
         {
+            list_modules();
         }
 
-        if (strncmp(cli_buffer, "install", 7)) //install modules
+        if (strncmp(cli_buffer, "install", 7) == 0) //install modules
         {
             install_module();
         }
 
-        if (strncmp(cli_buffer, "uninstall", 9)) //uninstall modules
+        if (strncmp(cli_buffer, "uninstall", 9) == 0) //uninstall modules
         {
             uninstall_module();
         }
-        */
     } 
 }
