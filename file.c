@@ -6,23 +6,14 @@
 
 void parse_main_conf()
 {
-    FILE *main_config = fopen("main.conf", "r");
-    char module_name[64];
+    FILE *main_config = fopen("main.conf", "r"); // Open main.conf
+    char module_name[64]; // Module names can have a max of 63 chars
 
-    if (fscanf(main_config, "%63s", module_name))
+    // Reads conf file line-by-line for module names
+    while (fscanf(main_config, "%s ", module_name) > 0)
     {
         add_modules(module_name);
     }
 
     fclose(main_config);
-}
-
-int install_module()
-{
-
-}
-
-int uninstall_module()
-{
-    
 }
