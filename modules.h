@@ -8,6 +8,7 @@ typedef struct node
 } node;
 
 int add_modules(const char *name);
+
 void list_modules();
 
 #endif
