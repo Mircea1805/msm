@@ -9,9 +9,9 @@ Modular Server Manager este un software modular destinat serverelor fizice și a
 `gcc`
 `git`
 ### Instrucțiuni:
-`git clone https://github.com/Mircea1805/msm`
-`cd msm`
-`make`
+- `git clone https://github.com/Mircea1805/msm`
+- `cd msm`
+- `make`
 
 ## Crearea și utilizarea modulelor:
 Pentru a crea module ce vor fi rulate de msm, este necesară crearea unei librării dinamice care să conțină o funcție cu aceeași denumire ca librăria. Pentru rulare, aceasta trebuie plasată în același folder cu executabilul msm și trebuie trecută denumirea fișierului în main.conf pe o nouă linie.
