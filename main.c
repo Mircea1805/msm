@@ -9,7 +9,10 @@
 int main()
 {
     // Parse conf file
-    parse_main_conf();
+    if (parse_main_conf())
+    {
+        return 1;
+    }
 
     // cli loop
     char cli_buffer[256];
@@ -35,7 +38,7 @@ int main()
         // exit
         if (strncmp(cli_buffer, "exit", 4) == 0)
         {
-            return 0;
+            break;
         }
 
         // modules
@@ -45,4 +48,6 @@ int main()
             continue;
         }
     }
+
+    return 0;
 }

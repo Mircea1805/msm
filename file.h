@@ -2,6 +2,6 @@
 #define FILE_H
 
 /* Function for parsing main.conf */
-void parse_main_conf();
+int parse_main_conf();
 
 #endif
